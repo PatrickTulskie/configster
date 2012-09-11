@@ -31,7 +31,7 @@ module Configster
   # ===========================
   # = Core Configster Methods =
   # ===========================
-  def self.load_configster!(configster_config)
+  def self.load!(configster_config)
     @configster_config = case configster_config
     when Hash
       configster_config

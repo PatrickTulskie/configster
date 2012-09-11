@@ -26,7 +26,7 @@ RSpec.configure do |config|
   end
 end
 
-Configster.load_configster!(File.join($spec_root, 'configurations', 'test_configuration.yml'))
+Configster.load!(File.join($spec_root, 'configurations', 'test_configuration.yml'))
 
 class KonfiguredKlass
   include Configster

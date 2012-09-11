@@ -23,9 +23,9 @@ Or install it yourself as:
 For most applications, you'll want to load Configster before you start loading the rest of your application.  For example:
 
     require 'configster'
-    Configster.load_configster!(File.join('path', 'to', 'my_config.yml'))
+    Configster.load!(File.join('path', 'to', 'my_config.yml'))
     
-You can also pass a raw hash of stuff into `load_configster!` as long as it's in the format of `"ClassName" => { 'variable' => 'whatever' }`
+You can also pass a raw hash of stuff into `load!` as long as it's in the format of `"ClassName" => { 'variable' => 'whatever' }`
 
 Then, just include Configster in any classes you want:
 
@@ -48,7 +48,7 @@ First, make yourself a nice little configuration file and save it to `~/my_sweet
 Then, you'll write your application like this:
 
     require 'configster'
-    Configster.load_configster!('~/my_sweet_app_credentials.yml')
+    Configster.load!('~/my_sweet_app_credentials.yml')
     
     class MySweetApp
 
