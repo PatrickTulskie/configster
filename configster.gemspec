@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["patricktulskie@gmail.com"]
   gem.description   = %q{Configster is a tidy little configuration management utility for your application.  Store your configuration as YAML outside of your application.  You probably haven't heard of it.}
   gem.summary       = %q{Configster keeps your configuration out of your application.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/PatrickTulskie/configster"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
