@@ -1,0 +1,8 @@
+KonfiguredKlass:
+  user_name: configster
+  password: c0nfigster!
+  tag_line: "You've probably never heard of it."
+AnotherKlass:
+  user_name: another
+  password: weakpassword
+  tag_line: "Whatever, bro."
