@@ -70,7 +70,6 @@ Then, you'll write your application like this:
     end
     
 Now you can share your application without hard coding and/or sharing your credentials.
-    
 
 ## Contributing
 

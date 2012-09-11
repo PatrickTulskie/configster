@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Configster::VERSION
   gem.authors       = ["Patrick Tulskie"]
   gem.email         = ["patricktulskie@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Configster is a tidy little configuration management utility for your application.  Store your configuration as YAML outside of your application.  You probably haven't heard of it.}
+  gem.summary       = %q{Configster keeps your configuration out of your application.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
