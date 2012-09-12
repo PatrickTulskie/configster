@@ -5,11 +5,11 @@ module Configster
   # =========================================
   module ClassMethods
     def configster
-      @configster ||= Configster.configuration_for(self)
+      @configster ||= Configster.config_for(self)
     end
     
     def raw_configster
-      Configster.raw_configuration_for(self)
+      Configster.raw_config_for(self)
     end
   end
   
@@ -32,20 +32,23 @@ module Configster
   # = Core Configster Methods =
   # ===========================
   def self.load!(configster_config)
-    @configster_config = case configster_config
+    @configster_config ||= { }
+    new_config = case configster_config
     when Hash
       configster_config
     when String
       YAML.load_file(configster_config)
     end
+    
+    @configster_config.merge!(new_config)
   end
   
-  def self.configuration_for(klass)
+  def self.config_for(klass)
     klass_config = @configster_config[klass.to_s]
     klass_config ? OpenStruct.new(klass_config).freeze : nil
   end
   
-  def self.raw_configuration_for(klass)
+  def self.raw_config_for(klass)
     @configster_config[klass.to_s]
   end
   
