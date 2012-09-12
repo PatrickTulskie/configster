@@ -48,7 +48,7 @@ First, make yourself a nice little configuration file and save it to `~/my_sweet
 Then, you'll write your application like this:
 
     require 'configster'
-    Configster.load!('~/my_sweet_app_credentials.yml')
+    Configster.load!('File.expand_path(~/my_sweet_app_credentials.yml'))
     
     class MySweetApp
 
@@ -70,6 +70,8 @@ Then, you'll write your application like this:
     end
     
 Now you can share your application without hard coding and/or sharing your credentials.
+
+For more examples accessing Configster directly or using it without YAML, check the examples directory in the gem.
 
 ## Contributing
 
