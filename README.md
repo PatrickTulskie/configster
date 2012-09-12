@@ -69,6 +69,14 @@ Then, you'll write your application like this:
       
     end
     
+You can also access the configuration more directly without the mixin by doing the following:
+    
+    # Return the config as an instance of OpenStruct
+    Configster.config_for('MySweetApp')
+    
+    # Return the config as a raw hash
+    Configster.raw_config_for('MySweetApp')
+    
 Now you can share your application without hard coding and/or sharing your credentials.
 
 For more examples accessing Configster directly or using it without YAML, check the examples directory in the gem.
