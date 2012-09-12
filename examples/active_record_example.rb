@@ -14,4 +14,8 @@ Configster.load!(
 )
 
 # You don't have to load from the mixin - you can just access Configster directly for free form configurations.
-ActiveRecord::Base.establish_connection(Configster.config_for('my_production_database'))
+my_database_config = Configster.raw_config_for('my_production_database')
+my_database_config.symbolize_keys!
+
+# And throw it into ActiveRecord
+ActiveRecord::Base.establish_connection(my_database_config)
