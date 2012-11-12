@@ -33,14 +33,20 @@ module Configster
   # ===========================
   def self.load!(configster_config)
     @configster_config ||= { }
-    new_config = case configster_config
+    case configster_config
     when Hash
-      configster_config
+      @configster_config.merge!(configster_config)
     when String
-      YAML.load_file(configster_config)
+      if File.directory?(configster_config)
+        Dir.glob(File.join(configster_config, "*.yml")).each do |file|
+          @configster_config.merge!(YAML.load_file(file))
+        end
+      elsif File.exists?(configster_config)
+        @configster_config.merge!(YAML.load_file(configster_config))
+      else
+        raise "Unable to locate #{configster_config}"
+      end
     end
-    
-    @configster_config.merge!(new_config)
   end
   
   def self.config_for(klass)

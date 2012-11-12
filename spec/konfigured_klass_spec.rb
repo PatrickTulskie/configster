@@ -3,6 +3,7 @@ require "spec_helper"
 describe KonfiguredKlass do
   
   before(:all) do
+    Configster.load!(File.join($spec_root, 'configurations', 'test_configuration.yml'))
     @test_klass = KonfiguredKlass.new
   end
   
