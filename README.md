@@ -27,6 +27,12 @@ For most applications, you'll want to load Configster before you start loading t
     
 You can also pass a raw hash of stuff into `load!` as long as it's in the format of `"ClassName" => { 'variable' => 'whatever' }`
 
+    Configster.load!('MyAwesomeClass' => { :something => 'cool' })
+    
+Or load an entire directory:
+
+    Configster.load!(File.join(Rails.root, 'config', 'configster'))
+
 Then, just include Configster in any classes you want:
 
     class KonfiguredKlass

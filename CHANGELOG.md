@@ -1,3 +1,13 @@
+## 0.0.3 (November 12, 2012)
+
+Features:
+
+  - Load a directory of configs instead of having to load all of them manually.
+
+Documentation:
+
+  - Added example for loading a directory.
+
 ## 0.0.2 (September 12, 2012)
 
 Features:
