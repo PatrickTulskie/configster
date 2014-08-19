@@ -54,7 +54,7 @@ First, make yourself a nice little configuration file and save it to `~/my_sweet
 Then, you'll write your application like this:
 
     require 'configster'
-    Configster.load!('File.expand_path(~/my_sweet_app_credentials.yml'))
+    Configster.load!(File.expand_path('~/my_sweet_app_credentials.yml'))
     
     class MySweetApp
 
