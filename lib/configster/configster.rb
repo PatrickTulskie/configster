@@ -41,7 +41,7 @@ module Configster
         Dir.glob(File.join(configster_config, "*.yml")).each do |file|
           @configster_config.merge!(YAML.load_file(file))
         end
-      elsif File.exists?(configster_config)
+      elsif File.exist?(configster_config)
         @configster_config.merge!(YAML.load_file(configster_config))
       else
         raise "Unable to locate #{configster_config}"
