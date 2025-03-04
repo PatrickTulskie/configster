@@ -1,3 +1,10 @@
+# Change Log
+
+## 0.1.0 (March 6, 2025)
+
+  - Added support for Ruby 3.2
+  - Ruby 2.1 is now the minimum supported version
+
 ## 0.0.3 (November 12, 2012)
 
 Features:
